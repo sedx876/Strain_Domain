@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strain//Domain</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="https://bootswatch.com/4/solar/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header clearfix">
+      <h3 class="text-success">Strain//Domain</h3>
+    </div>
+    <div class="card text-white bg-success mb-3">
+      <h4>Organize Your Marijuana Strains</h4>
+        <p class="text-white">Strain//Domain is for medical and research purposes.</p>
+        <p class="text-white">Not for illicit or illegal activity. Please check your state or country's marijuana laws.</p>
+        <form id="strainForm">
+          <div class="form-group">
+            <input type="text" class="form-control" id="strainName" placeholder="Name of Your Strain">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="strainNotes" placeholder="Notes About Your Strain Example: THC Level, What You use it for etc.....">
+          </div>
+          <div class="form-group">
+            <select id="ListControlSelect" class="form-control">
+              <option selected>Choose a List To Add Your Strain To....</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-info">Save This Strain</button>
+        </form>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div id="savedStrains-container"></div>
+      </div>
+    </div>
+    <footer class="footer text-danger">
+      <p>&copy;2020</p>
+    </footer>
+  </div>
+  
+</body>
+</html>
