@@ -37,7 +37,8 @@ footer {
 
 body {
   margin: 50px 100px 50px 50px;
-  background: #f4f4f4;
+  /*background: #f4f4f4;*/
+  background: #2aa198;
   font-size: 17px;
   line-height: 1.6;
   /*display: flex;*/
@@ -47,7 +48,7 @@ body {
 }
 
 .button {
-  margin: 25px 100px 25px 250px;
+  margin: 20px 150px 10px 220px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,7 +94,8 @@ body {
 .modal-header {
   background: var(--modal-color);
   padding: 15px;
-  color: #fff;
+  /*color: #fff;*/
+  color: black;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   text-align: center;
@@ -101,13 +103,16 @@ body {
 
 .modal-body {
   padding: 10px 20px;
-  background: #fff;
+  /*background: #fff;*/
+  background: #2aa198;
+  color: black;
 }
 
 .close {
+  background-color: black;
   color: black;
   /*color: #ccc;*/
-  float: right;
+  float: center;
   font-size: 30px;
   /*color: #fff;*/
   color: black;
