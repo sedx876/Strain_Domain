@@ -17,13 +17,13 @@ class Strains{
   }
 
   deleteCard(id) {
-      this.adapter.deleteStrain(id).then(function(){
-          let cardDiv = document.getElementById("card-" + id);
-          cardDiv.parentElement.removeChild(cardDiv)
-      })
+    this.adapter.deleteStrain(id).then(function(){
+      let cardDiv = document.getElementById("card-" + id);
+      cardDiv.parentElement.removeChild(cardDiv)
+    })
       this.strains.forEach(i => {
-          this.strains.splice(i, 1)
-      })
+        this.strains.splice(i, 1)
+    })
   }
 
   createCard(e) {
@@ -32,11 +32,11 @@ class Strains{
     const notes = this.newStrainNotes.value;
     const listId = this.dropdownContainer.value;
     this.adapter.createStrain(name, notes, listId).then(strain => {
-        this.strains.push(new Strain(strain.data));
-        this.newStrainName.value = '';
-        this.newStrainNotes.value = '';
+      this.strains.push(new Strain(strain.data));
+      this.newStrainName.value = '';
+      this.newStrainNotes.value = '';
         
-        this.render();
+      this.render();
     });
   }
 
