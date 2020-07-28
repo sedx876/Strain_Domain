@@ -24,4 +24,15 @@ class StrainAdapter {
     })
     .then(res => res.json())
   }
+
+  deleteStrain(id) {
+    return fetch(`${this.baseURL}/${id}`, {
+        method: 'DELETE',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify({"id": id})
+    })
+}
+
 }
