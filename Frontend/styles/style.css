@@ -25,7 +25,7 @@ h5{
 }
 
 span{
-  color: #779600;
+  color: #2aa198;
 }
 
 footer {
@@ -58,7 +58,8 @@ body {
   align-items: center;
   text-align: center;
   height: 50px;
-  background: #428bca;
+  /*background: #428bca;*/
+  background: #2aa198;
   padding: 1em 2em;
   color: #fff;
   border: 0;

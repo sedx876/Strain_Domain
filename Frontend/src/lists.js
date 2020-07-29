@@ -19,8 +19,8 @@ class Lists{
     })
   }
 
-  render(){
-    this.lists.forEach(list => this.listInput(list))
+  listInput(list){
+    this.dropdownContainer.innerHTML += this.listHtml(list)
   }
 
   listHtml(list){
@@ -29,7 +29,8 @@ class Lists{
     `
   }
 
-  listInput(list){
-    this.dropdownContainer.innerHTML += this.listHtml(list)
+  render(){
+    this.lists.forEach(list => this.listInput(list))
   }
+
 }

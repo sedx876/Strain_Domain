@@ -9,7 +9,7 @@ class Strain{
 
   renderCard(){
       return `
-      <div class="card bg-success text-white" id="card-${this.id}">
+      <div class="card bg-dark text-white" id="card-${this.id}">
       <div class="card-header">
       <h3>&#10009; ${this.listTitle} &#10009;</h3>
       </div>

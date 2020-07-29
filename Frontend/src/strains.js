@@ -11,19 +11,23 @@ class Strains{
     this.newStrainName = document.querySelector(".form-group #strainName");
     this.newStrainNotes = document.querySelector(".form-group #strainNotes");
     this.dropdownContainer = document.querySelector(".form-group #ListControlSelect");
-    this.cardForm = document.getElementById("strainForm");
-    this.cardForm.addEventListener("submit", this.createCard.bind(this));
+    this.strainForm = document.getElementById("strainForm");
+    this.strainForm.addEventListener("submit", this.createCard.bind(this));
     this.strainContainer.addEventListener('click', e => this.deleteCard(e.target.id))
   }
 
-  deleteCard(id) {
-    this.adapter.deleteStrain(id).then(function(){
-      let cardDiv = document.getElementById("card-" + id);
-      cardDiv.parentElement.removeChild(cardDiv)
+  fetchAndLoadStrains(){
+    this.adapter 
+    .getStrains()
+    .then(strains => {
+        strains.data.forEach(strain =>
+          this.strains.push(new Strain(strain))
+      );
     })
-      this.strains.forEach(i => {
-        this.strains.splice(i, 1)
-    })
+    .then(() => {
+
+      this.render();
+    });
   }
 
   createCard(e) {
@@ -40,22 +44,22 @@ class Strains{
     });
   }
 
-  fetchAndLoadStrains(){
-    this.adapter 
-    .getStrains()
-    .then(strains => {
-        strains.data.forEach(strain =>
-          this.strains.push(new Strain(strain))
-      );
+  deleteCard(id) {
+    this.adapter.deleteStrain(id).then(function(){
+      let cardDiv = document.getElementById("card-" + id);
+      cardDiv.parentElement.removeChild(cardDiv)
     })
-    .then(() => {
-        this.render();
-    });
+      this.strains.forEach(i => {
+        this.strains.splice(i, 1)
+    })
   }
+
+  
 
   render() {
       this.strainContainer.innerHTML = this.strains 
       .map(strain => strain.renderCard())
       .join("");
   }
+
 }
