@@ -24,6 +24,10 @@ h5{
   font-style: oblique;
 }
 
+span{
+  color: #779600;
+}
+
 footer {
   align-content: center;
 }
@@ -48,7 +52,7 @@ body {
 }
 
 .button {
-  margin: 20px 150px 10px 220px;
+  margin: 20px 125px 10px 200px;
   display: flex;
   justify-content: center;
   align-items: center;

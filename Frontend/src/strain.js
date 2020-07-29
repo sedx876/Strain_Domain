@@ -11,13 +11,13 @@ class Strain{
       return `
       <div class="card bg-success text-white" id="card-${this.id}">
       <div class="card-header">
-      <h3>${this.listTitle}</h3>
+      <h3>&#10009; ${this.listTitle} &#10009;</h3>
       </div>
       <div class="card-body">
-      <h5>${this.name}</h5>
+      <h5>&#9886; ${this.name} &#9887;</h5>
       <p>${this.notes}</p>
       <button type="submit" class="btn btn-danger btn-small" 
-      id="${this.id}">Delete This Strain</button>
+      id="${this.id}">&#9888;Delete This Strain&#9888;</button>
       </div>
       </div>
       `;
