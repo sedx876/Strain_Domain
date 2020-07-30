@@ -1,5 +1,4 @@
 class StrainsController < ApplicationController
-  before_action :set_strain, only: [:show, :update, :destroy]
 
   def index
     @strains = Strain.all 
@@ -24,13 +23,8 @@ class StrainsController < ApplicationController
     @strain.destroy
   end
 
-  private
+private
 
-  def set_strain
-    @strain = Strain.find(params[:id])
-  end
-
-  
   def strain_params
     params.require(:strain).permit(:name, :notes, :list_id)
   end

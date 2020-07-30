@@ -1,11 +1,4 @@
 class StrainSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :name, :notes, :list
-
-  private
-
-  def lists
-    ListSerializer.new(object.lists).attributes 
-  end
-  
+  attributes :name, :notes, :list 
 end
