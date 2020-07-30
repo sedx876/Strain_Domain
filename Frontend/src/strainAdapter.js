@@ -31,8 +31,8 @@ class StrainAdapter {
         headers: {
             'content-type': 'application/json'
         },
-        body: JSON.stringify({"id": id})
-    })
-}
+        body: JSON.stringify({ "id": id })
+  })
+ }
 
 }
